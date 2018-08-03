@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif; }
+
+.app {
+  background-color: #6C747F;
+  height: 100vh; }
+  .app .main-title-wrap {
+    z-index: 1;
+    text-align: right;
+    height: 120px; }
+    .app .main-title-wrap .main-title {
+      font-family: "Caveat", sans-serif;
+      color: #fff;
+      text-align: center; }
+  .app .section {
+    font-family: "Titillium Web", sans-serif; }
+    .app .section.home h1 {
+      font-size: 50px; }
+    .app .section.is-active {
+      animation: pageLoad 600ms ease-in-out forwards; }
+  .app nav.main-nav {
+    float: left;
+    color: #A5B1C2;
+    width: 220px;
+    height: 100vh;
+    background-color: #363A40;
+    padding-top: 200px; }
+    .app nav.main-nav h2.nav-title {
+      font-family: "Caveat", sans-serif;
+      margin-left: 60px; }
+    .app nav.main-nav ul.nav-list {
+      z-index: 2;
+      margin-left: 120px; }
+      .app nav.main-nav ul.nav-list li.nav-item {
+        cursor: pointer;
+        font-size: 20px;
+        list-style: none; }
+        .app nav.main-nav ul.nav-list li.nav-item.is-active {
+          color: #D9E9FF;
+          animation: navSelected 600ms ease-in-out forwards; }
+        .app nav.main-nav ul.nav-list li.nav-item a:hover {
+          color: #D9E9FF; }
+
+@keyframes navSelected {
+  0% {
+    transform: translateX(5px); }
+  50% {
+    transform: translateX(-5px); }
+  100% {
+    transform: translateX(0px); } }
+@keyframes pageLoad {
+  0% {
+    transform: translateY(500px); }
+  100% {
+    transform: translateY(0px); } }
+
+/*# sourceMappingURL=style.css.map */
