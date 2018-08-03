@@ -39,10 +39,7 @@
         font-size: 20px;
         list-style: none; }
         .app nav.main-nav ul.nav-list li.nav-item.is-active {
-          color: #D9E9FF;
           animation: navSelected 600ms ease-in-out forwards; }
-        .app nav.main-nav ul.nav-list li.nav-item a:hover {
-          color: #D9E9FF; }
 
 @keyframes navSelected {
   0% {
