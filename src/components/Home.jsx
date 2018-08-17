@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+/* Temporarily not in use */
 class Home extends Component {
 
     render() { 

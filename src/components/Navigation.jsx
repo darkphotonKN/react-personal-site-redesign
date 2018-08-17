@@ -5,16 +5,17 @@ import { NavLink as ReactRouterLink} from 'react-router-dom';
 import Radium from 'radium';
 
 
-
-const Navigation = ({sections, activateSection}) => {
+const Navigation = ({sections, onActivateSection}) => {
     const NavLink = Radium(ReactRouterLink); // work around to make Radium work for NavLink
 
     const navStyles = {
-        color: '#A5B1C2', 
+        color: '#D9F3FF', 
         textDecoration: 'none',
+        transition: '200ms ease-in-out',
+        // useabe with radium
         ':hover': {
             color: '#B29D74',
-            transform: 'scale(1.2)'
+            transform: 'scale(1.1)'
         } 
     }
     
@@ -27,11 +28,10 @@ const Navigation = ({sections, activateSection}) => {
                     <li 
                         style={navStyles}
                         key={section.id} 
-                        onClick={() => 
-                            activateSection(section)} 
-                            className={section.active === true ? 'nav-item is-active' : 'nav-item'}>
-                        <NavLink to={'/' + section.name} style={navStyles} activeStyle={{ color: '#D9E9FF'}}>
-                            { section.name !== 'thesite' ? section.name : 'the site' }
+                        onClick={() => onActivateSection(section)} 
+                        className={section.active === true ? 'nav-item is-active' : 'nav-item'}>
+                        <NavLink to={ '/' + section.name } style={navStyles} activeStyle={{ color: '#B29674'}}>
+                            { section.name !== 'thesite' ? section.name[0].toUpperCase() + section.name.slice(1, section.name.length) : 'The Site' }
                             {/* testing { console.log(section.name + ' is now active: ' + section.active)} */}
                         </NavLink>
                     </li>) 

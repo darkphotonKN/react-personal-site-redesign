@@ -1,4 +1,7 @@
 
+$section-top-space: 190px
+$site-height: 1300px
+$nav-width: 220px
 
 *
     margin: 0
@@ -7,37 +10,50 @@
     font-family: 'Titillium Web', sans-serif
 
 .app 
-    
-    background-color: #6C747F
-    height: 100vh
+    padding-top: $section-top-space
+    // background-color: #6C747F
+    background:
+        image: url('../images/bg.jpg')
+        size: cover
+    height: $site-height
 
     .main-title-wrap
         z-index: 1
-        text-align: right
-        height: 120px
+        height: 100px
+        position: absolute
+        top: 60vh
+        margin-top: -50px
+        left: 60%
 
         .main-title
+            font-family: 'Caveat', sans-serif 
+            font-size: 80px
+            color: black
+
+        .main-title-desc
             font-family: 'Caveat', sans-serif
-            color: #fff
-            text-align: center
+            font-size: 29px
     
     .section 
+        margin-left: $nav-width
         font-family: 'Titillium Web', sans-serif
         
-        &.home
-            
-            h1 
-                font-size: 50px
+        h1 
+            font-family: 'Caveat', sans-serif
+            font-size: 55px
+            text-align: left
 
         &.is-active
             animation: pageLoad 600ms ease-in-out forwards
 
     nav.main-nav
-        float: left
-        color: #A5B1C2
-        width: 220px
-        height: 100vh
-        background-color: #363A40
+        position: fixed
+        margin-top: -($section-top-space)
+        // float: left
+        color: #B29674
+        width: $nav-width
+        height: 100%
+        background-color: #227093 //#363A40
         padding-top: 200px
 
         h2.nav-title 
@@ -57,16 +73,104 @@
                     animation: navSelected 600ms ease-in-out forwards
 
 
+/* Animations */
+
 @keyframes navSelected
     0%
-        transform: translateX(5px)
-    50% 
-        transform: translateX(-5px)
-    100%
         transform: translateX(0px)
+
+    100%
+        transform: translateX(10px)
 
 @keyframes pageLoad
     0%
-        transform: translateY(500px)
+        transform: translateY(200px) rotate(10deg)
+        opacity: 0.5
     100%
         transform: translateY(0px)
+        opacity: 1
+
+/* Media Queries */
+$section-top-space-Lg: 20vh
+
+@media (max-width: 1190px) 
+    .app 
+        padding-top: $section-top-space-Lg
+
+        .main-title-wrap
+            top: 10vh
+            left: 235px
+
+            .main-title
+                font-size: 50px
+
+            .main-title-desc
+                font-size: 22px
+
+        nav.main-nav
+            margin-top: -($section-top-space-Lg)
+            float: left
+            color: #A5B1C2
+            width: 190px
+            height: 100vh
+            background-color: #363A40
+            padding-top: 200px
+            
+            ul.nav-list
+                margin-left: 70px
+                z-index: 2   
+        .section 
+            font-family: 'Titillium Web', sans-serif
+
+            h1 
+                font-size: 30px
+
+
+/* Media Queries */
+$section-top-space-Sm: 20vh
+$nav-margin: 130px
+
+@media (max-width: 690px) 
+    .app 
+        height: 1500px
+        padding-top: $section-top-space-Sm
+
+        .main-title-wrap
+            top: 10vh
+            left: $nav-margin+10
+
+            .main-title
+                font-size: 30px
+
+            .main-title-desc
+                font-size: 15px
+
+        nav.main-nav
+            margin-top: -($section-top-space-Sm)
+            float: left
+            color: #A5B1C2
+            width: $nav-margin
+            height: 1500px
+            background-color: #363A40
+            padding-top: 30px
+
+            h2.nav-title 
+                font-size: 30px
+                font-family: 'Caveat', sans-serif
+
+
+            ul.nav-list
+                margin-left: 40px
+                z-index: 2          
+
+                li.nav-item
+                    cursor: pointer
+                    font-size: 16px
+                    list-style: none
+                    
+            
+        .section 
+            font-family: 'Titillium Web', sans-serif
+
+            h1 
+                font-size: 30px

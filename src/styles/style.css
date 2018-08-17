@@ -5,28 +5,40 @@
   font-family: "Titillium Web", sans-serif; }
 
 .app {
-  background-color: #6C747F;
-  height: 100vh; }
+  padding-top: 190px;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  height: 1300px; }
   .app .main-title-wrap {
     z-index: 1;
-    text-align: right;
-    height: 120px; }
+    height: 100px;
+    position: absolute;
+    top: 60vh;
+    margin-top: -50px;
+    left: 60%; }
     .app .main-title-wrap .main-title {
       font-family: "Caveat", sans-serif;
-      color: #fff;
-      text-align: center; }
+      font-size: 80px;
+      color: black; }
+    .app .main-title-wrap .main-title-desc {
+      font-family: "Caveat", sans-serif;
+      font-size: 29px; }
   .app .section {
+    margin-left: 220px;
     font-family: "Titillium Web", sans-serif; }
-    .app .section.home h1 {
-      font-size: 50px; }
+    .app .section h1 {
+      font-family: "Caveat", sans-serif;
+      font-size: 55px;
+      text-align: left; }
     .app .section.is-active {
       animation: pageLoad 600ms ease-in-out forwards; }
   .app nav.main-nav {
-    float: left;
-    color: #A5B1C2;
+    position: fixed;
+    margin-top: -190px;
+    color: #B29674;
     width: 220px;
-    height: 100vh;
-    background-color: #363A40;
+    height: 100%;
+    background-color: #227093;
     padding-top: 200px; }
     .app nav.main-nav h2.nav-title {
       font-family: "Caveat", sans-serif;
@@ -41,17 +53,78 @@
         .app nav.main-nav ul.nav-list li.nav-item.is-active {
           animation: navSelected 600ms ease-in-out forwards; }
 
+/* Animations */
 @keyframes navSelected {
   0% {
-    transform: translateX(5px); }
-  50% {
-    transform: translateX(-5px); }
+    transform: translateX(0px); }
   100% {
-    transform: translateX(0px); } }
+    transform: translateX(10px); } }
 @keyframes pageLoad {
   0% {
-    transform: translateY(500px); }
+    transform: translateY(200px) rotate(10deg);
+    opacity: 0.5; }
   100% {
-    transform: translateY(0px); } }
+    transform: translateY(0px);
+    opacity: 1; } }
+/* Media Queries */
+@media (max-width: 1190px) {
+  .app {
+    padding-top: 20vh; }
+    .app .main-title-wrap {
+      top: 10vh;
+      left: 235px; }
+      .app .main-title-wrap .main-title {
+        font-size: 50px; }
+      .app .main-title-wrap .main-title-desc {
+        font-size: 22px; }
+    .app nav.main-nav {
+      margin-top: -20vh;
+      float: left;
+      color: #A5B1C2;
+      width: 190px;
+      height: 100vh;
+      background-color: #363A40;
+      padding-top: 200px; }
+      .app nav.main-nav ul.nav-list {
+        margin-left: 70px;
+        z-index: 2; }
+    .app .section {
+      font-family: "Titillium Web", sans-serif; }
+      .app .section h1 {
+        font-size: 30px; } }
+/* Media Queries */
+@media (max-width: 690px) {
+  .app {
+    height: 1500px;
+    padding-top: 20vh; }
+    .app .main-title-wrap {
+      top: 10vh;
+      left: 140px; }
+      .app .main-title-wrap .main-title {
+        font-size: 30px; }
+      .app .main-title-wrap .main-title-desc {
+        font-size: 15px; }
+    .app nav.main-nav {
+      margin-top: -20vh;
+      float: left;
+      color: #A5B1C2;
+      width: 130px;
+      height: 1500px;
+      background-color: #363A40;
+      padding-top: 30px; }
+      .app nav.main-nav h2.nav-title {
+        font-size: 30px;
+        font-family: "Caveat", sans-serif; }
+      .app nav.main-nav ul.nav-list {
+        margin-left: 40px;
+        z-index: 2; }
+        .app nav.main-nav ul.nav-list li.nav-item {
+          cursor: pointer;
+          font-size: 16px;
+          list-style: none; }
+    .app .section {
+      font-family: "Titillium Web", sans-serif; }
+      .app .section h1 {
+        font-size: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
