@@ -55,7 +55,7 @@ class App extends Component {
           <Route path="/blog" render={(props) => <Blog sections={sections} {...props}/>}/>          
           <Route path="/contact" render={(props) => <Contact sections={sections} {...props}/>}/>
           <Route path="/notfound" component={NotFound}/>
-          <Redirect from="/" to="/notfound"/>
+          <Redirect from="/" to="/about"/>
           <Redirect to="/notfound"/>
         </Switch>
 

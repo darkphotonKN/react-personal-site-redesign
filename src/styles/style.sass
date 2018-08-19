@@ -1,6 +1,6 @@
 
 $section-top-space: 190px
-$site-height: 1300px
+$site-height: 1200px
 $nav-width: 220px
 
 *
@@ -10,6 +10,7 @@ $nav-width: 220px
     font-family: 'Titillium Web', sans-serif
 
 .app 
+    border: 2px solid #B29674
     padding-top: $section-top-space
     // background-color: #6C747F
     background:
@@ -33,6 +34,7 @@ $nav-width: 220px
         .main-title-desc
             font-family: 'Caveat', sans-serif
             font-size: 29px
+            color: #fff
     
     .section 
         margin-left: $nav-width
@@ -43,17 +45,46 @@ $nav-width: 220px
             font-size: 55px
             text-align: left
 
-        &.is-active
-            animation: pageLoad 600ms ease-in-out forwards
+        .section-p
+
+            &.is-active
+                animation: pageLoad 600ms ease-in-out forwards
+
+        /* Individual Sections */
+        
+        .blog
+            margin-left: 20px
+            color: #B29674
+            padding: 1em
+            background-color: black
+            opacity: 0.9
+            border: 2px solid #B29674
+
+            .blog-wrap
+                margin-top: 20px
+
+
+                h2 
+                    color: #B29674
+                    font-size: 24px
+                
+                span.blog-date
+                    color: #B29674
+                    font-size: 14px
+
+                p
+                    color: #227093
+
 
     nav.main-nav
+        border-right: 2px solid #B29674
         position: fixed
         margin-top: -($section-top-space)
         // float: left
         color: #B29674
         width: $nav-width
         height: 100%
-        background-color: #227093 //#363A40
+        background-color: black //#363A40
         padding-top: 200px
 
         h2.nav-title 
@@ -70,7 +101,7 @@ $nav-width: 220px
                 list-style: none
                 
                 &.is-active
-                    animation: navSelected 600ms ease-in-out forwards
+                    animation: navSelected 300ms ease-in-out forwards
 
 
 /* Animations */
@@ -113,7 +144,6 @@ $section-top-space-Lg: 20vh
             color: #A5B1C2
             width: 190px
             height: 100vh
-            background-color: #363A40
             padding-top: 200px
             
             ul.nav-list
@@ -151,7 +181,6 @@ $nav-margin: 130px
             color: #A5B1C2
             width: $nav-margin
             height: 1500px
-            background-color: #363A40
             padding-top: 30px
 
             h2.nav-title 
