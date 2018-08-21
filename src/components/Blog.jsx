@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const Blog = () => {
+const Blog = ({ sections }) => {
     return ( 
         <div className="row section">
             <div className="col-6 blog">
                 <h1>Blog</h1>
-                <div className="blog-wrap">
+                <div className={sections[4].active ? "blog-wrap is-active" : "blog-wrap"}>
                     <h2 className="blog-title">My Second Personal Site - in React</h2>
                     <span className="blog-date">Aug 3rd</span>
 
