@@ -52,8 +52,8 @@ class App extends Component {
           <Route path="/resume" render={(props) => <Resume sections={sections} {...props}/>}/>
           <Route path="/thesite" render={(props) => <TheSite sections={sections} sectionActive={this.state.sections[2].active} {...props}/>}/>
           <Route path="/projects" render={(props) => <Projects sections={sections} {...props}/>}/>
-          <Route path="/blog" render={(props) => <Blog sections={sections} {...props}/>}/>          
-          <Route path="/contact" render={(props) => <Contact sections={sections} {...props}/>}/>
+          <Route path="/blog" render={(props) => <Blog sections={sections} sectionActive={this.state.sections[4].active} {...props}/>}/>          
+          <Route path="/contact" render={(props) => <Contact sections={sections} sectionActive={this.state.sections[5].active} {...props}/>}/>
           <Route path="/notfound" component={NotFound}/>
           <Redirect from="/" to="/about"/>
           <Redirect to="/notfound"/>
