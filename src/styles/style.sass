@@ -16,7 +16,9 @@ $nav-width: 220px
     background:
         image: url('../images/bg.jpg')
         size: cover
-    height: $site-height
+    min-height: $site-height
+    height: 100%
+    width: 100%
 
     
     /* SITE TITLE */
@@ -136,11 +138,71 @@ $nav-width: 220px
                 animation: resume-load 500ms ease-in-out forwards
 
 
+        /* PROJECTS */
+        $proj-img-h: 300px
+        $proj-img-w: 100%
+
+        .project 
+
+            .project-block 
+                color: #B29674
+                padding: 1em
+                background-color: black
+                opacity: 0.9
+                border: 2px solid #B29674
+                margin-bottom: 20px
+                
+                h2
+                    font-size: 15px
+
+                .proj-img-1
+                    height: $proj-img-h
+                    width: $proj-img-w
+                    background: 
+                        image: url('../images/project-images/proj1.png')
+                        size: cover
+
+                .proj-img-2
+                    height: $proj-img-h
+                    width: $proj-img-w
+                    background: 
+                        image: url('../images/project-images/proj2.png')
+                        size: cover
+                        
+                .proj-img-3
+                    height: $proj-img-h
+                    width: $proj-img-w
+                    background: 
+                        image: url('../images/project-images/proj3.png')
+                        size: cover
+                        
+                .proj-img-4
+                    height: $proj-img-h
+                    width: $proj-img-w
+                    background: 
+                        image: url('../images/project-images/proj4.png')
+                        size: cover
+                        
+                .proj-img-5
+                    height: $proj-img-h
+                    width: $proj-img-w
+                    background: 
+                        image: url('../images/project-images/proj5.png')
+                        size: cover
+                        
+                .proj-img-6
+                    height: $proj-img-h
+                    width: $proj-img-w
+                    background: 
+                        image: url('../images/project-images/proj6.png')
+                        size: cover
+
+
     /* NAVIGATION */
 
     nav.main-nav
         border-right: 2px solid #B29674
-        // border-top: 2px solid #B29674
+        border-top: 2px solid #B29674
         position: fixed
         margin-top: -($section-top-space)
         // float: left
@@ -178,11 +240,19 @@ $nav-width: 220px
 
 @keyframes pageLoad
     0%
-        transform: translateY(200px) rotate(10deg)
+        transform: scaleX(0.3)
+        opacity: 0.3
+    60% 
+        transform: scaleX(1)
         opacity: 0.5
     100%
-        transform: translateY(0px)
         opacity: 1
+
+@keyframes resume-load
+    0%
+        transform: translateX(500px) scale(0.7)
+    100%
+        transform: translateX(0) scale(1)
 
 @keyframes blog-load
     0%

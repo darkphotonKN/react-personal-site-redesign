@@ -22,8 +22,6 @@ class Resume extends Component {
             <div className="row section">
                 <div className="col-6 resume">
                     <h1>Resume</h1>
-                    {/* <img src={require('/images/image-name.png')} */}
-                    { console.log(this.state.resumePage) }
                     { this.renderPage(this.state.resumePage) }
                     <button 
                         onClick={() => this.handlePageFlip(this.state.resumePage)} 

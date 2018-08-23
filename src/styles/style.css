@@ -9,7 +9,9 @@
   padding-top: 190px;
   background-image: url("../images/bg.jpg");
   background-size: cover;
-  height: 1200px;
+  min-height: 1200px;
+  height: 100%;
+  width: 100%;
   /* SITE TITLE */
   /* SECTIONS GENERAL */
   /* NAVIGATION */ }
@@ -36,7 +38,8 @@
     /* INDIVIDUAL SECTIONS */
     /* BLOG */
     /* CONTACT */
-    /* RESUME */ }
+    /* RESUME */
+    /* PROJECTS */ }
     .app .section h1 {
       font-family: "Caveat", sans-serif;
       font-size: 55px;
@@ -93,8 +96,48 @@
       height: 800px;
       width: 700px;
       animation: resume-load 500ms ease-in-out forwards; }
+    .app .section .project .project-block {
+      color: #B29674;
+      padding: 1em;
+      background-color: black;
+      opacity: 0.9;
+      border: 2px solid #B29674;
+      margin-bottom: 20px; }
+      .app .section .project .project-block h2 {
+        font-size: 15px; }
+      .app .section .project .project-block .proj-img-1 {
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/project-images/proj1.png");
+        background-size: cover; }
+      .app .section .project .project-block .proj-img-2 {
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/project-images/proj2.png");
+        background-size: cover; }
+      .app .section .project .project-block .proj-img-3 {
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/project-images/proj3.png");
+        background-size: cover; }
+      .app .section .project .project-block .proj-img-4 {
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/project-images/proj4.png");
+        background-size: cover; }
+      .app .section .project .project-block .proj-img-5 {
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/project-images/proj5.png");
+        background-size: cover; }
+      .app .section .project .project-block .proj-img-6 {
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/project-images/proj6.png");
+        background-size: cover; }
   .app nav.main-nav {
     border-right: 2px solid #B29674;
+    border-top: 2px solid #B29674;
     position: fixed;
     margin-top: -190px;
     color: #B29674;
@@ -123,11 +166,18 @@
     transform: translateX(10px); } }
 @keyframes pageLoad {
   0% {
-    transform: translateY(200px) rotate(10deg);
+    transform: scaleX(0.3);
+    opacity: 0.3; }
+  60% {
+    transform: scaleX(1);
     opacity: 0.5; }
   100% {
-    transform: translateY(0px);
     opacity: 1; } }
+@keyframes resume-load {
+  0% {
+    transform: translateX(500px) scale(0.7); }
+  100% {
+    transform: translateX(0) scale(1); } }
 @keyframes blog-load {
   0% {
     transform: translateX(500px) scale(0.7); }
